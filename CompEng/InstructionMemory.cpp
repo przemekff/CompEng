@@ -1,6 +1,6 @@
 #include "InstructionMemory.h"
 
-int InstructionMemory::get_instruction(int address)
+unsigned __int32 InstructionMemory::get_instruction(int address)
 {
 	return memory[address];
 }

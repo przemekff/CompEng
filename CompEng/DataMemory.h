@@ -1,8 +1,8 @@
 #pragma once
 
-const int MEMORY_SIZE = 1024;
+const int MEMORY_SIZE = 256;
 
-class InstructionMemory
+class DataMemory
 {
 public:
 	unsigned __int32 get_instruction(int address);
