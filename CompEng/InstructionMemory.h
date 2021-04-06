@@ -1,13 +1,18 @@
 #pragma once
 
-const int MEMORY_SIZE = 1024;
+#include <iostream>
+#include <string>
+#include <fstream>
+
 
 class InstructionMemory
 {
 public:
-	unsigned __int32 get_instruction(int address);
+	std::string get_instruction(int address);
+	void read_instructions(const std::string& filename);
+	void print_instructions();
 
 private:
-	unsigned __int32 memory[MEMORY_SIZE];
+	std::string  memory[256];
 };
 

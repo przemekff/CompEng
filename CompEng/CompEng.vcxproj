@@ -151,6 +151,9 @@
     <ClInclude Include="InstructionMemory.h" />
     <ClInclude Include="ProgramCounter.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

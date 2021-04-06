@@ -1,33 +1,57 @@
 #include "Decoder.h"
 
-void Decoder::decode(unsigned __int32 input)
+void Decoder::decode(std::string  input)
 {
-	instruction = std::to_string(input);
+	instruction = input;
 	opcode = instruction.substr(0, 6);
+
+	if (stoi(opcode) == 0)
+	{
+		R = 1;
+		I = 0;
+		J = 0;
+	}
+	else if (stoi(opcode) == 2 || stoi(opcode) == 3)
+	{
+		R = 0;
+		I = 0;
+		J = 0;
+	}
+	else
+	{
+		R = 0;
+		I = 1;
+		J = 0;
+	}
+
 }
 
 int Decoder::get_rs()
 {
-	return stoi(opcode.substr(6, 5));
+	return stoi(instruction.substr(6, 5));
 }
 
 int Decoder::get_rt()
 {
-	return stoi(opcode.substr(11, 5));
+	return stoi(instruction.substr(11, 5));
 }
 int Decoder::get_rd()
 {
-	return stoi(opcode.substr(16, 5));
+	return stoi(instruction.substr(16, 5));
 }
 int Decoder::get_shamt()
 {
-	return stoi(opcode.substr(21, 5));
+	return stoi(instruction.substr(21, 5));
 }
 int Decoder::get_funct()
 {
-	return stoi(opcode.substr(26, 6));
+	return stoi(instruction.substr(26, 6));
+}
+int Decoder::get_imm()
+{
+	return stoi(instruction.substr(16, 16));
 }
 int Decoder::get_address()
 {
-	return stoi(opcode.substr(6, 26));
+	return stoi(instruction.substr(6, 26));
 }

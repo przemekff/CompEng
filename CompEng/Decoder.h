@@ -6,7 +6,7 @@ class Decoder
 {
 
 public:
-	void decode(unsigned __int32 input);
+	void decode(std::string  input);
 	int get_rs();
 	int get_rt();
 	int get_rd();
@@ -17,7 +17,10 @@ public:
 
 private:
 	std::string instruction;
-	std::string opcode; 
+	std::string opcode;
+	bool R;
+	bool I; 
+	bool J;
 
 };
 
