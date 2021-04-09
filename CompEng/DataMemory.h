@@ -7,9 +7,10 @@ const int MEMORY_SIZE = 256;
 class DataMemory
 {
 public:
-	unsigned __int32  get_data(int address);
+	int  get_data(int address);
+	void set_data(int address, int data);
 
 private:
-	unsigned __int32  memory[MEMORY_SIZE];
+	int  memory[MEMORY_SIZE];
 };
 

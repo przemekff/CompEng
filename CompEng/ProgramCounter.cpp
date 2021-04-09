@@ -8,7 +8,6 @@ int ProgramCounter::get_address()
 void ProgramCounter::increment_address()
 {
 	address += 1;
-
 }
 
 void ProgramCounter::branch_address(int offset)
@@ -16,7 +15,7 @@ void ProgramCounter::branch_address(int offset)
 	address += offset;
 }
 
-void ProgramCounter::jump_address(int jump_address)
+void ProgramCounter::set_address(int set_address)
 {
-	address = jump_address;
+	address = set_address;
 }

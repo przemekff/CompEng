@@ -144,12 +144,16 @@
     <ClCompile Include="InstructionMemory.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ProgramCounter.cpp" />
+    <ClCompile Include="Registers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="DataMemory.h" />
     <ClInclude Include="Decoder.h" />
     <ClInclude Include="InstructionMemory.h" />
+    <ClInclude Include="IntermediateRegisters.h" />
     <ClInclude Include="ProgramCounter.h" />
+    <ClInclude Include="Registers.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />

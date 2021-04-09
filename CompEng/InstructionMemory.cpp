@@ -16,17 +16,17 @@ void InstructionMemory::read_instructions(const std::string& filename)
 		memory[i] = s;
 		i++;
 	}
+	while (i < 256)
+	{
+		memory[i] = "";
+		i++;
+	}
 }
 
 void InstructionMemory::print_instructions()
 {
-	for (int i = 0; i < 256; i++)
-	{
-		std::cout << memory[i]<<std::endl;
-	}
+
+		std::cout << memory[0]<<std::endl;
 }
 
-void InstructionMemory::convert_to_MC()
-{
-	for(int i =0; i)
-}
+

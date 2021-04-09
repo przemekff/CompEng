@@ -1,6 +1,11 @@
 #include "DataMemory.h"
 
-unsigned __int32  DataMemory::get_data(int address)
+int  DataMemory::get_data(int address)
 {
 	return memory[address];
+}
+
+void DataMemory::set_data(int address, int data)
+{
+	memory[address] = data;
 }
